@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head> <!-- -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luna Maria | Portafolio</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <script src="js/asistente.js" defer></script>
+</head>
+
+<!-- -->
+
+<body>
+
+    <!-- -->
+    <header class="header">
+        <div class="barra">
+            <a class="logo" href="index.html">
+                <h1 class="logo__nombre">My page</h1>
+            </a>
+            <nav class="navegacion">
+                <a href="sobremi.html" class="navegacion__enlace">Sobre Mi</a>
+                <a href="portafolio.html" class="navegacion__enlace">Portafolio</a>
+                <a href="contacto.html" class="navegacion__enlace">Contacto</a>
+            </nav>
+        </div>
+        <div class="header__texto animate__animated animate__fadeInDown animate__slower">
+            <h2 class="no-margin">Luna Maria</h2>
+            <p class="no-margin">Desarrolladora full stack</p>
+        </div>
+    </header>
+
+    <!-- -->
+    <main class="main-me">
+        <section class="stack">
+            <h2 class="titulo-seccion">Mi Stack</h2>
+            <div class="stack-grid">
+                <div class="stack-card">
+                    <img src="img/js.png" alt="JavaScript">
+                    <p>JavaScript</p>
+                </div>
+
+                <div class="stack-card">
+                    <img src="img/js.png" alt="HTML">
+                    <p>HTML</p>
+                </div>
+
+                <div class="stack-card">
+                    <img src="img/js.png" alt="CSS">
+                    <p>CSS</p>
+                </div>
+
+                <div class="stack-card">
+                    <img src="img/react.png" alt="Java">
+                    <p>Java</p>
+                </div>
+
+                <div class="stack-card">
+                    <img src="img/node.png" alt="Python">
+                    <p>Python</p>
+                </div>
+
+                <div class="stack-card">
+                    <img src="img/tailwind.png" alt="Assembler">
+                    <p>Assembler</p>
+                </div>
+
+                <div class="stack-card">
+                    <img src="img/js.png" alt="PostgreSQL">
+                    <p>PostgreSQL</p>
+                </div>
+
+                <div class="stack-card">
+                    <img src="img/js.png" alt="PHP">
+                    <p>PHP</p>
+                </div>
+
+
+            </div>
+        </section>
+
+        <!-- -->
+        <section class="asistente">
+            <h2 class="titulo-seccion">Asistente</h2>
+            <div class="asistente-ventana">
+                <div class="asistente-header">
+                    <div class="asistente-avatar">A</div>
+                    <div>
+                        <p class="asistente-nombre">Asistente de Luna</p>
+                        <span class="asistente-status">En línea</span>
+                    </div>
+                </div>
+
+                <div class="asistente-mensaje" id="chat"></div>
+
+                <div class="asistente-input">
+                    <input type="text" id="userInput" placeholder="Preguntame sobre Luna o sus tecnologias ..."
+                        onkeypress="if(event.key==='Enter') enviarMensaje()" />
+                    <button onclick="enviarMensaje()">Enviar</button>
+                </div>
+            </div>
+            <div class="asistente-sugerencias">
+                <button onclick="preguntaRapida('¿Quien es Luna?')">¿Quien es Luna?</button>
+                <button onclick="preguntaRapida('¿Que tecnologias usa?')">Tecnologias</button>
+                <button onclick="preguntaRapida('¿Que proyectos tiene?')">Proyectos</button>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- -->
+    <footer class="footer">
+
+        <div class="barra">
+            <a class="logo" href="index.html">
+                <h1 class="logo__nombre no-margin centrar-texto">My page</h1>
+            </a>
+            <nav class="navegacion">
+                <a href="sobremi.html" class="navegacion__enlace">Sobre Mi</a>
+                <a href="portafolio.html" class="navegacion__enlace">Portafolio</a>
+                <a href="contacto.html" class="navegacion__enlace">Contacto</a>
+            </nav>
+
+        </div>
+    </footer>
+</body>
+
+</html>
