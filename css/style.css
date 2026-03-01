@@ -18,10 +18,12 @@ body {
     font-family: 'Open Sans', sans-serif;
     background-color: var(--crema);
     color: var(--gris);
+    
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
+
 a {
     text-decoration: none;
 }
@@ -29,7 +31,7 @@ a {
 
 /*HEADER */
 .header {
-    height: 70vh;
+    height: 50vh;
     background-image: url(../img/banner.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -40,18 +42,18 @@ a {
 
 /**/
 .header__texto {
-    margin-top: 15rem;
+    margin-top: 5rem;
 }
 
 .header__texto h2 {
-    font-size: 5.5rem;
-    font-weight: 800;
+    font-size: clamp(2rem, 5vw, 4rem);
+    font-weight: 700;
 }
 
 .header__texto p {
-    font-size: 2.3rem;
+    font-size: clamp(1.2rem, 2vw, 2.3rem);
     margin-top: 1rem;
-    letter-spacing: 2px;
+    letter-spacing: 4px;
 }
 
 /*footer    */
@@ -70,6 +72,7 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
 }
 
 .logo {
@@ -77,7 +80,7 @@ a {
 }
 
 .logo__nombre {
-    font-weight: 400;
+    font-weight: 600;
 }
 
 .logo__bold {
@@ -93,7 +96,7 @@ a {
     color: #ffffff;
     position: relative;
     display: block;
-    font-size: 1.8rem;
+    font-size: 1rem;
 }
 
 /* Línea animada del navbar */
@@ -114,32 +117,33 @@ a {
 
 /*CONTENIDO PRINCIPAL */
 .main-me {
-    width: 95%;
-    max-width: 1300px;
-    margin: 4rem auto;
+    width: 90%;
+    max-width: 1200px;
+    margin: 2rem auto;
     flex: 1;
 }
 .main-me section {
   margin-bottom: 6rem;
+ 
 }
 
 
 /*TITULOS DE SECCION */
 .titulo-seccion {
     font-family: 'Oswald', sans-serif;
-    font-size: 3rem;
+    font-size: 2rem;
     margin-bottom: 4rem;
     position: relative;
     display: inline-block;
     text-align: center;
-    width: 100%; /* permite centrar la línea decorativa */
+    width: 100%; /*para centrar linea*/
 }
 
 /*Lnea decorativa */
 .titulo-seccion::after {
     content: "";
     display: block;
-    width: 60%;
+    width: 30%;
     height: 3px;
     background: linear-gradient(90deg, #f8d7e3, #e8d9f3);
     margin: 10px auto 0 auto;
@@ -152,7 +156,7 @@ a {
     align-items: center;
     gap: 5rem;
     background: var(--blanco);
-    padding: 4rem;
+    padding: clamp(1.5rem, 3vw, 4rem);
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.08);
     transition: all 0.4s ease;
@@ -164,8 +168,9 @@ a {
 }
 
 .sobre-mi__imagen img {
-    width: 380px;
-    max-width: 100%;
+        width: 100%;
+    max-width: 380px;
+    
     border-radius: 25px;
     object-fit: cover;
     transition: transform 0.4s ease;
@@ -275,15 +280,22 @@ a {
 .contacto__dato {
     font-size: 1.6rem;
     margin-bottom: 0.8rem;
+    text-decoration: none;
+    color: #000;
+    
+
+    
 }
 
 .contacto__ubicacion {
     margin-top: 2.5rem;
     font-size: 1.4rem;
     opacity: 0.8;
+    color: #000;
+    
 }
 
-/*ASISTENTE (Chat) */
+/*ASISTENTE */
 .asistente {
     display: flex;
     flex-direction: column;
@@ -416,14 +428,14 @@ a {
 }
 
 /*RESPONSIVE */
-@media (max-width: 768px) {
+@media (max-width: 700px) {
 
     .header__texto h2 {
-        font-size: 3.5rem;
+        font-size: 3rem;
     }
 
     .header__texto p {
-        font-size: 1.6rem;
+        font-size: 1rem;
     }
 
     .sobre-mi {
@@ -434,5 +446,16 @@ a {
 
     .sobre-mi__imagen img {
         width: 260px;
+    }
+}
+
+
+@media (min-width: 1600px) {
+    .header__texto h2 {
+        font-size: 5rem;
+    }
+
+    .main-me {
+        width: 80%;
     }
 }
