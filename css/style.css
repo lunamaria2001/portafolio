@@ -132,18 +132,17 @@ a {
 .titulo-seccion {
     font-family: 'Oswald', sans-serif;
     font-size: 2rem;
-    margin-bottom: 4rem;
-    position: relative;
-    display: inline-block;
+    margin: 0 auto 4rem auto;
     text-align: center;
-    width: 100%; /*para centrar linea*/
+    width: fit-content;
+    position: relative;
 }
 
 /*Lnea decorativa */
 .titulo-seccion::after {
     content: "";
     display: block;
-    width: 30%;
+    width: 10%;
     height: 3px;
     background: linear-gradient(90deg, #f8d7e3, #e8d9f3);
     margin: 10px auto 0 auto;
@@ -156,12 +155,60 @@ a {
     align-items: center;
     gap: 5rem;
     background: var(--blanco);
-    padding: clamp(1.5rem, 3vw, 4rem);
+    padding: 2rem; /*ideal el ancho 3 de pantalla*/
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.08);
     transition: all 0.4s ease;
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    overflow: visible;
+}
+.sobre-mi {
+    position: relative;
+    overflow: visible;
 }
 
+.sobre-mi::before,
+.sobre-mi::after {
+    content: "";
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #f8d7e3, #e8d9f3);
+    border-radius: 18px;
+    opacity: 0.5;
+
+    animation: flotar 6s ease-in-out infinite;
+}
+
+.sobre-mi::before {
+    left: -35px;
+    top: 10px;
+}
+
+.sobre-mi::after {
+    right: -35px;
+    bottom: 10px;
+    animation-delay: 3s;
+}
+
+/* animación */
+@keyframes flotar {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+
+
+
+
+
+/*sombrita*/
 .sobre-mi:hover {
     transform: translateY(-8px);
     box-shadow: 0 20px 40px rgba(0,0,0,0.15);
@@ -169,8 +216,7 @@ a {
 
 .sobre-mi__imagen img {
     width: 100%;
-    max-width: 380px;
-    
+    max-width: 500px;
     border-radius: 25px;
     object-fit: cover;
     transition: transform 0.4s ease;
@@ -190,20 +236,20 @@ a {
 .stack {
     margin: auto;
     text-align: center;
-    max-width: 800px;
+    max-width: 700px;
 }
 
 .stack-grid {
     margin-top: 4rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
     gap: 2rem;
 }
 
 /*Tarjetas del stack*/
 .stack-card {
     background: var(--blanco);
-    padding: 2rem 1rem;
+    padding: 1rem 1rem;
     border-radius: 18px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.08);
     transition: all 0.3s ease;
@@ -253,9 +299,33 @@ a {
 
 /*CONTACTO */
 .contacto {
-    text-align: center;
-    margin: 8rem auto;
-    max-width: 700px;
+  text-align: center;
+  margin: 1rem auto;
+  max-width: 900px;
+  padding: 2.5rem 10rem;
+  position: relative;
+  overflow: visible;
+}
+
+.decoracion {
+  position: absolute;
+  font-size: 2.5rem;
+  opacity: 0.6;
+  pointer-events: none; /* que no interfiera con clicks */
+  animation: flotar 6s ease-in-out infinite;
+}
+
+/* izquierda */
+.decoracion-izq {
+  left: -20px;
+  top: 30%;
+}
+
+/* derecha */
+.decoracion-der {
+  right: -20px;
+  top: 60%;
+  animation-delay: 2s;
 }
 
 .contacto__titulo {
@@ -278,13 +348,11 @@ a {
 }
 
 .contacto__dato {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     margin-bottom: 0.8rem;
     text-decoration: none;
     color: #000;
-    
-
-    
+    opacity: 0.8;
 }
 
 .contacto__ubicacion {
@@ -292,7 +360,6 @@ a {
     font-size: 1.4rem;
     opacity: 0.8;
     color: #000;
-    
 }
 
 /*ASISTENTE */
@@ -304,7 +371,7 @@ a {
 
 /*Ventana del chat */
 .asistente-ventana {
-    max-width: 440px;
+    max-width:  min(100%, 400px);
     margin: 3rem auto;
     background: #ffffff;
     border-radius: 18px;
@@ -312,7 +379,7 @@ a {
     overflow: hidden;
     font-size: 1.4rem;
     width: 100%;
-    height: 500px;  
+    height: 600px;  
     display: flex;
     flex-direction: column;
 }
@@ -336,21 +403,23 @@ a {
     align-items: center;
     justify-content: center;
     font-weight: bold;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
 }
 
 .asistente-nombre {
     margin: 0;
     font-weight: 600;
+    font-size: 1.3rem;
 }
 
 .asistente-status {
-    font-size: 1.2rem;
+    font-size: 1rem;
     opacity: 0.7;
 }
 
 /*area de mensajes */
 .asistente-mensaje {
+    font-size: 1.1rem;
     height: 280px;
     overflow-y: auto;
     flex: 1;        
@@ -361,6 +430,7 @@ a {
 
 /*Mensajes */
 .msg-user {
+    font-size: 1.1rem;
     text-align: right;
     margin-bottom: 0.8rem;
 }
