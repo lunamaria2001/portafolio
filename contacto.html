@@ -27,6 +27,8 @@
                 <a href="sobremi.html" class="navegacion__enlace">Sobre Mi</a>
                 <a href="portafolio.html" class="navegacion__enlace">Portafolio</a>
                 <a href="contacto.html" class="navegacion__enlace">Contacto</a>
+                <script src="js/formulario.js"></script>
+            
             </nav>
         </div>
         <div class="header__texto">
@@ -48,7 +50,25 @@
                 <a href="mailto:Luna22012001@gmail.com" class="contacto__dato">Luna22012001@gmail.com</a>
 
                 <p class="contacto__ubicacion">Buenos Aires, Argentina</p>
+
+
             </div>
+
+            <form id="form-contacto" class="contacto-form">
+
+                <input type="text" name="nombre" placeholder="Tu nombre" required>
+
+                <input type="email" name="email" placeholder="Tu email" required>
+
+                <textarea name="mensaje" placeholder="Tu mensaje" required></textarea>
+
+                <button type="submit">
+                    Enviar
+                </button>
+
+            </form>
+
+            <p id="respuesta"></p>
         </section>
 
 
