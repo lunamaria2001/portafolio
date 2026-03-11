@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio | Luna Maria</title>
-    <link rel="stylesheet" href="css/normalize.css">
+    
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="js/formulario.js" defer></script>
 </head>
 
 <body>
@@ -41,6 +42,35 @@
       allowfullscreen></iframe>
             </div>
         </section>
+
+        
+        <section class="comentarios-section">
+
+<h2>Comentarios</h2>
+
+<form id="comentario-form">
+
+<input 
+type="text"
+name="nombre"
+placeholder="Tu nombre"
+required
+>
+
+<textarea 
+name="mensaje"
+placeholder="Escribí tu comentario..."
+required
+></textarea>
+
+<button type="submit">Publicar comentario</button>
+
+</form>
+
+<div id="lista-comentarios"></div>
+
+</section>
+
 
 
 
