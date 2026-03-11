@@ -55,22 +55,34 @@
 
             </div>
 
-            <form id="form-contacto" class="contacto-form">
-
-                <input type="text" name="nombre" placeholder="Tu nombre" required>
-
-                <input type="email" name="email" placeholder="Tu email" required>
-
-                <textarea name="mensaje" placeholder="Tu mensaje" required></textarea>
-
-                <button type="submit">
-                    Enviar
-                </button>
-
-            </form>
-
-            <p id="respuesta"></p>
         </section>
+
+        <section class="comentarios-section">
+
+<h2>Comentarios</h2>
+
+<form id="comentario-form">
+
+<input 
+type="text"
+name="nombre"
+placeholder="Tu nombre"
+required
+>
+
+<textarea 
+name="mensaje"
+placeholder="Escribí tu comentario..."
+required
+></textarea>
+
+<button type="submit">Publicar comentario</button>
+
+</form>
+
+<div id="lista-comentarios"></div>
+
+</section>
 
 
     </main>
