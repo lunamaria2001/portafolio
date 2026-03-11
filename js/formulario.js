@@ -1,18 +1,22 @@
-const form = document.getElementById("form-contacto");
+document.addEventListener("DOMContentLoaded", () => {
 
-form.addEventListener("submit", async function(e) {
+  const form = document.getElementById("form-contacto");
 
-  e.preventDefault();
+  form.addEventListener("submit", async function(e) {
 
-  const datos = new FormData(form);
+    e.preventDefault();
 
-  const res = await fetch("/api/contacto", {
-    method: "POST",
-    body: datos
+    const datos = new FormData(form);
+
+    const res = await fetch("/api/contacto", {
+      method: "POST",
+      body: datos
+    });
+
+    const data = await res.json();
+
+    document.getElementById("respuesta").textContent = data.mensaje;
+
   });
-
-  const data = await res.json();
-
-  document.getElementById("respuesta").textContent = data.mensaje;
 
 });
